@@ -1,41 +1,38 @@
 package ifba.model;
 
 import java.util.Date;
+import jakarta.persistence.Entity;
 
-public class Professora extends Pessoa{
+@Entity
+public class Professora extends Pessoa {
 
-	private String especializacao;
-	private String cargaHoraria;
-	
-	public Professora() {
-		super();
-	}
+    private String especializacao;
+    private String cargaHoraria;
 
-	public Professora(String nome, String cpf, Date dataNascimento, String email, String telefone, String rg,
-			Endereco endereco, String especializacao, String cargaHoraria) {
-		super(nome, cpf, dataNascimento, email, telefone, rg, endereco);
-		this.especializacao = especializacao;
-		this.cargaHoraria = cargaHoraria;
-	}
+    public Professora() {
+        super();
+    }
 
-	public String getEspecializacao() {
-		return especializacao;
-	}
+    public Professora(String nome, String cpf, Date dataNascimento, String email, String telefone, String rg,
+            Endereco endereco, String especializacao, String cargaHoraria) {
+        super(nome, cpf, dataNascimento, email, telefone, rg, endereco);
+        this.especializacao = especializacao;
+        this.cargaHoraria = cargaHoraria;
+    }
 
-	public void setEspecializacao(String especializacao) {
-		this.especializacao = especializacao;
-	}
+    public String getEspecializacao() {
+        return especializacao;
+    }
 
-	public String getCargaHoraria() {
-		return cargaHoraria;
-	}
+    public void setEspecializacao(String especializacao) {
+        this.especializacao = especializacao;
+    }
 
-	public void setCargaHoraria(String cargaHoraria) {
-		this.cargaHoraria = cargaHoraria;
-	}
-		
-	
-	
-	
-	
+    public String getCargaHoraria() {
+        return cargaHoraria;
+    }
+
+    public void setCargaHoraria(String cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
+    }
 }

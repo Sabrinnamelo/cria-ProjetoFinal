@@ -21,5 +21,13 @@ public class TurmaService {
 	public List<Turma> listar( ) {
 		return repositoryT.findAll();
 	}
-	
+	public Optional<Turma> localizarPorId(int id){
+		return repositoryT.findById(id);
+	}
+	public Turma atualizar (Turma turma) {
+		return repositoryT.save(turma);
+	}
+	public void deletarPorId(int id) {
+		repositoryT.deleteById(id);
+	}
 }

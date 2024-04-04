@@ -2,6 +2,9 @@ package ifba.model;
 
 import java.util.Date;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class Responsavel extends Pessoa {
 
 	private String profissao;

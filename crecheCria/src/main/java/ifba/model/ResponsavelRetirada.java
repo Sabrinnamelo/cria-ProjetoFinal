@@ -2,11 +2,12 @@ package ifba.model;
 
 import java.util.Date;
 
+import jakarta.persistence.Entity;
+@Entity
 public class ResponsavelRetirada extends Pessoa{
 
-	private String validadeAutorizacao;
-	private String status;
-	private String prioridade;
+	private Date validadeAutorizacao;
+	private boolean status;
 	private String observacoes;
 	
 	public ResponsavelRetirada() {
@@ -14,36 +15,27 @@ public class ResponsavelRetirada extends Pessoa{
 	}
 
 	public ResponsavelRetirada(String nome, String cpf, Date dataNascimento, String email, String telefone, String rg,
-			Endereco endereco, String validadeAutorizacao, String status, String prioridade, String observacoes) {
+			Endereco endereco, Date validadeAutorizacao, boolean status, String observacoes) {
 		super(nome, cpf, dataNascimento, email, telefone, rg, endereco);
 		this.validadeAutorizacao = validadeAutorizacao;
 		this.status = status;
-		this.prioridade = prioridade;
 		this.observacoes = observacoes;
 	}
 
-	public String getValidadeAutorizacao() {
+	public Date getValidadeAutorizacao() {
 		return validadeAutorizacao;
 	}
 
-	public void setValidadeAutorizacao(String validadeAutorizacao) {
+	public void setValidadeAutorizacao(Date validadeAutorizacao) {
 		this.validadeAutorizacao = validadeAutorizacao;
 	}
 
-	public String getStatus() {
+	public boolean isStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(boolean status) {
 		this.status = status;
-	}
-
-	public String getPrioridade() {
-		return prioridade;
-	}
-
-	public void setPrioridade(String prioridade) {
-		this.prioridade = prioridade;
 	}
 
 	public String getObservacoes() {
@@ -53,7 +45,5 @@ public class ResponsavelRetirada extends Pessoa{
 	public void setObservacoes(String observacoes) {
 		this.observacoes = observacoes;
 	}
-	
-	
-	
+
 }

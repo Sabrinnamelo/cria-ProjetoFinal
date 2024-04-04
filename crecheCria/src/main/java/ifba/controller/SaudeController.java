@@ -13,42 +13,42 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ifba.model.Turma;
-import ifba.service.TurmaService;
+import ifba.model.Saude;
+import ifba.service.SaudeService;
 
 @RestController
-@RequestMapping("turma")
-public class TurmaController {
+@RequestMapping("saude")
+public class SaudeController {
 	/*
-	 *POST 		 save(Turma):turma 
-	 *GET  		 listarAll (List<Turma>)
-	 *GET  		 LocalizarPorId(id):Turma
-	 *PUT 	     atualizar(turma):Turma
+	 *POST 		 save(Saude):saude 
+	 *GET  		 listarAll (List<Saude>)
+	 *GET  		 LocalizarPorId(id):Saude
+	 *PUT 	     atualizar(saude):Saude
 	 *DELETE 	 delete(int):void
 	 */
 
 	@Autowired
-	private TurmaService serviceTurma;
+	private SaudeService serviceSaude;
 	
 	@PostMapping 
-	public Turma add(@RequestBody Turma turma) {
-		return serviceTurma.inserir(turma);
+	public Saude add(@RequestBody Saude saude) {
+		return serviceSaude.inserir(saude);
 	}
 	
 	@GetMapping
-	public List<Turma> listAll() { 
-		return serviceTurma.listar();
+	public List<Saude> listAll() { 
+		return serviceSaude.listar();
 	}
 	@GetMapping("/{id}")
-	public Optional<Turma> LocalizarPorId( @PathVariable int id) { 
-		return serviceTurma.localizarPorId(id);
+	public Optional<Saude> LocalizarPorId( @PathVariable int id) { 
+		return serviceSaude.localizarPorId(id);
 	}
 	@PutMapping
-	public Turma atualizar(@RequestBody Turma turma) {
-		return serviceTurma.atualizar(turma);
+	public Saude atualizar(@RequestBody Saude saude) {
+		return serviceSaude.atualizar(saude);
 	}
 	@DeleteMapping("/{id}")
 	public void delete( @PathVariable int id) { 
-		 serviceTurma.deletarPorId(id);
+		 serviceSaude.deletarPorId(id);
 	}
 }

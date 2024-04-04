@@ -13,42 +13,42 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ifba.model.Turma;
-import ifba.service.TurmaService;
+import ifba.model.Responsavel;
+import ifba.service.ResponsavelService;
 
 @RestController
-@RequestMapping("turma")
-public class TurmaController {
+@RequestMapping("responsavel")
+public class ResponsavelController {
 	/*
-	 *POST 		 save(Turma):turma 
-	 *GET  		 listarAll (List<Turma>)
-	 *GET  		 LocalizarPorId(id):Turma
-	 *PUT 	     atualizar(turma):Turma
+	 *POST 		 save(Responsavel):responsavel 
+	 *GET  		 listarAll (List<Responsavel>)
+	 *GET  		 LocalizarPorId(id):Responsavel
+	 *PUT 	     atualizar(responsavel):Responsavel
 	 *DELETE 	 delete(int):void
 	 */
 
 	@Autowired
-	private TurmaService serviceTurma;
+	private ResponsavelService serviceResponsavel;
 	
 	@PostMapping 
-	public Turma add(@RequestBody Turma turma) {
-		return serviceTurma.inserir(turma);
+	public Responsavel add(@RequestBody Responsavel responsavel) {
+		return serviceResponsavel.inserir(responsavel);
 	}
 	
 	@GetMapping
-	public List<Turma> listAll() { 
-		return serviceTurma.listar();
+	public List<Responsavel> listAll() { 
+		return serviceResponsavel.listar();
 	}
 	@GetMapping("/{id}")
-	public Optional<Turma> LocalizarPorId( @PathVariable int id) { 
-		return serviceTurma.localizarPorId(id);
+	public Optional<Responsavel> LocalizarPorId( @PathVariable int id) { 
+		return serviceResponsavel.localizarPorId(id);
 	}
 	@PutMapping
-	public Turma atualizar(@RequestBody Turma turma) {
-		return serviceTurma.atualizar(turma);
+	public Responsavel atualizar(@RequestBody Responsavel responsavel) {
+		return serviceResponsavel.atualizar(responsavel);
 	}
 	@DeleteMapping("/{id}")
 	public void delete( @PathVariable int id) { 
-		 serviceTurma.deletarPorId(id);
+		 serviceResponsavel.deletarPorId(id);
 	}
 }

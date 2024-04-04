@@ -1,27 +1,44 @@
 package ifba.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
+@Entity
 public class Matricula {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	private int anoLetivo;
 	private String status;
-	private String alergia;
-	private String laudo;
+	
+	@ManyToOne
 	private Crianca crianca;
+	
+	@ManyToOne
 	private Professora professora;
+	
+	@ManyToOne
 	private Turma turma;
+	
+	@ManyToOne
+	private Creche creche;
 	
 	public Matricula() {
 		super();
 	}
 
-	public Matricula(String status, String alergia, String laudo, Crianca crianca, Professora professora, Turma turma) {
+	public Matricula(int anoLetivo, String status, Crianca crianca, Professora professora, Turma turma, Creche creche) {
 		super();
+		this.anoLetivo = anoLetivo;
 		this.status = status;
-		this.alergia = alergia;
-		this.laudo = laudo;
 		this.crianca = crianca;
 		this.professora = professora;
 		this.turma = turma;
+		this.creche = creche;
 	}
 
 	public int getId() {
@@ -32,28 +49,20 @@ public class Matricula {
 		this.id = id;
 	}
 
+	public int getAnoLetivo() {
+		return anoLetivo;
+	}
+
+	public void setAnoLetivo(int anoLetivo) {
+		this.anoLetivo = anoLetivo;
+	}
+
 	public String getStatus() {
 		return status;
 	}
 
 	public void setStatus(String status) {
 		this.status = status;
-	}
-
-	public String getAlergia() {
-		return alergia;
-	}
-
-	public void setAlergia(String alergia) {
-		this.alergia = alergia;
-	}
-
-	public String getLaudo() {
-		return laudo;
-	}
-
-	public void setLaudo(String laudo) {
-		this.laudo = laudo;
 	}
 
 	public Crianca getCrianca() {
@@ -78,6 +87,14 @@ public class Matricula {
 
 	public void setTurma(Turma turma) {
 		this.turma = turma;
+	}
+
+	public Creche getCreche() {
+		return creche;
+	}
+
+	public void setCreche(Creche creche) {
+		this.creche = creche;
 	}
 	
 	

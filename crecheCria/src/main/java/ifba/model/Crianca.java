@@ -3,8 +3,18 @@ package ifba.model;
 import java.util.Date;
 import java.util.List;
 
+import org.hibernate.annotations.ManyToAny;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
+@Entity
 public class Crianca {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nome;
 	private String genero;
@@ -13,7 +23,13 @@ public class Crianca {
 	private int certidaoNascimento;
 	private int nis;
 	private Date dataNascimento;
+	
+	@OneToOne
 	private Responsavel responsavel;
+	@OneToOne
+	private Saude saudeCrianca;
+
+	@ManyToAny
 	private List<ResponsavelRetirada> responsavelRetirada;
 	
 	public Crianca() {
@@ -21,7 +37,8 @@ public class Crianca {
 	}
 
 	public Crianca(String nome, String genero, String cpf, int sus, int certidaoNascimento, int nis,
-			Date dataNascimento, Responsavel responsavel, List<ResponsavelRetirada> responsavelRetirada) {
+			Date dataNascimento, Responsavel responsavel, Saude saudeCrianca,
+			List<ResponsavelRetirada> responsavelRetirada) {
 		super();
 		this.nome = nome;
 		this.genero = genero;
@@ -31,6 +48,7 @@ public class Crianca {
 		this.nis = nis;
 		this.dataNascimento = dataNascimento;
 		this.responsavel = responsavel;
+		this.saudeCrianca = saudeCrianca;
 		this.responsavelRetirada = responsavelRetirada;
 	}
 
@@ -106,6 +124,14 @@ public class Crianca {
 		this.responsavel = responsavel;
 	}
 
+	public Saude getSaudeCrianca() {
+		return saudeCrianca;
+	}
+
+	public void setSaudeCrianca(Saude saudeCrianca) {
+		this.saudeCrianca = saudeCrianca;
+	}
+
 	public List<ResponsavelRetirada> getResponsavelRetirada() {
 		return responsavelRetirada;
 	}
@@ -114,5 +140,4 @@ public class Crianca {
 		this.responsavelRetirada = responsavelRetirada;
 	}
 
-	
 }

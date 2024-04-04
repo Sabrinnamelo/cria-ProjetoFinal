@@ -13,42 +13,42 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ifba.model.Turma;
-import ifba.service.TurmaService;
+import ifba.model.Endereco;
+import ifba.service.EnderecoService;
 
 @RestController
-@RequestMapping("turma")
-public class TurmaController {
+@RequestMapping("endereco")
+public class EnderecoController {
 	/*
-	 *POST 		 save(Turma):turma 
-	 *GET  		 listarAll (List<Turma>)
-	 *GET  		 LocalizarPorId(id):Turma
-	 *PUT 	     atualizar(turma):Turma
+	 *POST 		 save(Endereco):endereco 
+	 *GET  		 listarAll (List<Endereco>)
+	 *GET  		 LocalizarPorId(id):Endereco
+	 *PUT 	     atualizar(endereco):Endereco
 	 *DELETE 	 delete(int):void
 	 */
 
 	@Autowired
-	private TurmaService serviceTurma;
+	private EnderecoService serviceEndereco;
 	
 	@PostMapping 
-	public Turma add(@RequestBody Turma turma) {
-		return serviceTurma.inserir(turma);
+	public Endereco add(@RequestBody Endereco endereco) {
+		return serviceEndereco.inserir(endereco);
 	}
 	
 	@GetMapping
-	public List<Turma> listAll() { 
-		return serviceTurma.listar();
+	public List<Endereco> listAll() { 
+		return serviceEndereco.listar();
 	}
 	@GetMapping("/{id}")
-	public Optional<Turma> LocalizarPorId( @PathVariable int id) { 
-		return serviceTurma.localizarPorId(id);
+	public Optional<Endereco> LocalizarPorId( @PathVariable int id) { 
+		return serviceEndereco.localizarPorId(id);
 	}
 	@PutMapping
-	public Turma atualizar(@RequestBody Turma turma) {
-		return serviceTurma.atualizar(turma);
+	public Endereco atualizar(@RequestBody Endereco endereco) {
+		return serviceEndereco.atualizar(endereco);
 	}
 	@DeleteMapping("/{id}")
 	public void delete( @PathVariable int id) { 
-		 serviceTurma.deletarPorId(id);
+		 serviceEndereco.deletarPorId(id);
 	}
 }
