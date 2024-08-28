@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ifba.model.Crianca;
+import ifba.model.ResponsavelRetirada;
 import ifba.service.CriancaService;
 
 @RestController
@@ -50,5 +51,11 @@ public class CriancaController {
 	@DeleteMapping("/{id}")
 	public void delete( @PathVariable int id) { 
 		 serviceCrianca.deletarPorId(id);
+	}
+	@PutMapping("/responsavel/{id}")
+	public Crianca addResponsavelR(@RequestBody ResponsavelRetirada responsavelR , @PathVariable int id) {
+		Crianca crianca = serviceCrianca.localizarPorId(id).get();
+		crianca.addResponsavelRetirada(responsavelR);
+		return serviceCrianca.atualizar(crianca); 
 	}
 }

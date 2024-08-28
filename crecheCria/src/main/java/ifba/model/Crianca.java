@@ -5,10 +5,14 @@ import java.util.List;
 
 import org.hibernate.annotations.ManyToAny;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 @Entity
 public class Crianca {
@@ -22,11 +26,14 @@ public class Crianca {
 	private int sus;
 	private int certidaoNascimento;
 	private int nis;
+	
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date dataNascimento;
 	
-	@OneToOne
+	@ManyToOne
 	private Responsavel responsavel;
-	@OneToOne
+	
+	@OneToOne(cascade = CascadeType.ALL)
 	private Saude saudeCrianca;
 
 	@ManyToAny
@@ -138,6 +145,9 @@ public class Crianca {
 
 	public void setResponsavelRetirada(List<ResponsavelRetirada> responsavelRetirada) {
 		this.responsavelRetirada = responsavelRetirada;
+	}
+	public void addResponsavelRetirada(ResponsavelRetirada responsavelRetirada) {
+		this.responsavelRetirada.add(responsavelRetirada);
 	}
 
 }

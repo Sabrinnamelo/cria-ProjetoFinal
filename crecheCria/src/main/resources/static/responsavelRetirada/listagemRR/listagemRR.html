@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssListagemRR.css">
+    <title>Responsáveis de Retirada</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Professores</a></li>
+            <li><a href="#">Responsavéis</a></li>
+            <li><a href="#">Responsavéis de Retirada</a></li>
+            <li><a href="#">Crianças</a></li>
+            <li><a href="#">Turma</a></li>
+            <li><a href="#">Matricula</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Responsável de Retirada</h1>
+            <a href="../cadastroRR/cadastroRR.html" class="new-btn" id="openModal">+ Novo Responsável </a>
+        </div>
+
+        <div class="search-filter">
+            <select name="filtro-turma">
+                <option value="todas">Todas</option>
+            </select>
+            <input type="text" placeholder="Pesquisa rápida">
+        </div>
+
+        <table id="tb-form" border="1" class="tb-form">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>CPF:</th>
+                    <th>Email</th>
+                    <th>Cidade</th>
+                    <th>Ações</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+	
+	<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="document.getElementById('editModal').style.display='none'">&times;</span>
+        <h2>Editar Responsável</h2>
+        <input type="hidden" id="edit-id">
+
+        <label for="edit-nome">Nome:</label>
+        <input type="text" id="edit-nome">
+
+        <label for="edit-cpf">CPF:</label>
+        <input type="text" id="edit-cpf">
+
+        <label for="edit-email">Email:</label>
+        <input type="text" id="edit-email">
+
+        <label for="edit-cidade">Cidade:</label>
+        <input type="text" id="edit-cidade">
+
+        
+
+        <label for="edit-telefone">Telefone:</label>
+        <input type="text" id="edit-telefone">
+
+        <button class="btn-editar" onclick="salvarEdicao()">Salvar</button>
+    </div>
+</div>
+	
+	
+    <script src="jvListagemRR.js"></script>
+</body>
+
+</html>

@@ -2,6 +2,7 @@ package ifba.model;
 
 import java.util.Date;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,7 +24,8 @@ public class Pessoa {
 	 private String email;
 	 private String telefone;
 	 private String rg;
-	 @ManyToOne
+	 
+	 @ManyToOne(cascade = CascadeType.ALL)
 	 private Endereco endereco;
 	 
 	 public Pessoa() {

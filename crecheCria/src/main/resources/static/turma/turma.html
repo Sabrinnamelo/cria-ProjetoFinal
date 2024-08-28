@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turmas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Professores</a></li>
+            <li><a href="#">Responsavéis</a></li>
+            <li><a href="#">Responsavéis de Retirada</a></li>
+            <li><a href="#">Crianças</a></li>
+            <li><a href="#">Turma</a></li>
+            <li><a href="#">Matricula</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Turmas</h1>
+            <button class="new-turma-btn " id="openModal">+ Nova Turma</button>
+        </div>
+
+        <!-- Tela de sobreposição (Modal) -->
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>CADASTRO</h2>
+
+                <form action="http://localhost:8080/turma" class="form-sobrep" id="form-turma" method="post"> 
+
+                    <label for="sala">Sala:</label><br>
+                    <input type="text" id="sala" name="sala">
+
+                    <label for="horario">Horário:</label><br>
+                    <input type="text" id="horario" name="horario">
+
+                    <label for="turno">Turno:</label><br>
+                    <input type="text" id="turno" name="turno">
+
+            <button class="btn-cadastrar" type="submit">CADASTRAR TURMA NOVA</button>
+                </form>
+
+            </div>
+        </div>
+
+		<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close-edit">&times;</span>
+        <h2>EDITAR TURMA</h2>
+
+        <form class="form-sobrep" id="form-editar-turma" method="post">
+            <input type="hidden" id="edit-id" name="id">
+            <label for="edit-sala">Sala:</label><br>
+            <input type="text" id="edit-sala" name="sala">
+
+            <label for="edit-horario">Horário:</label><br>
+            <input type="text" id="edit-horario" name="horario">
+
+            <label for="edit-turno">Turno:</label><br>
+            <input type="text" id="edit-turno" name="turno">
+
+            <button class="btn-cadastrar" type="submit">SALVAR ALTERAÇÕES</button>
+        </form>
+    </div>
+</div>
+		
+
+        <div class="search-filter">
+            <select name="filtro-turma">
+                <option value="todas">Todas</option>
+            </select>
+            <input type="text" placeholder="Pesquisa rápida">
+        </div>
+
+        <table class="turmas-table" id="turmas-table">
+            <thead>
+                <tr>
+               	    <th> Id </th>
+                    <th>Nome da Sala</th>
+                    <th>Horario</th>
+                    <th>Turno</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+             
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

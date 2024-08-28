@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssCadProf.css">
+    <title>Cadastro Professor(a)</title>
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">HOME </a></li>
+                <li><a href="#">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+
+        <form id="form" method="post" action="professora">
+            <div class="form-resp">
+                <h1> PROFESSOR(a)</h1>
+
+                <label for="nome"> Nome: </label>
+                <input type="text" name="nome" id="nome"> <br>
+
+                <div class="org-cpf-rg">
+                    <label for="cpf"> CPF: </label>
+                    <input type="text" name="cpf" id="cpf"> <br>
+
+                    <label for="rg"> RG: </label>
+                    <input type="text" name="rg" id="rg"> <br>
+                </div>
+                <label for="dataN"> Data nascimento: </label>
+                <input type="date" name="dataNascimento" id="dataNascimento"> <br>
+
+                <label for="email"> Email: </label>
+                <input type="email" name="email" id="email"> <br>
+
+                <label for="telefone"> Telefone: </label>
+                <input type="tel" name="telefone" id="telefone"> <br>
+
+                <label for="especializacao"> Especialização: </label>
+                <input type="text" name="especializacao" id="especializacao"> <br>
+
+                <label for="cargaHoraria"> Carga Horária: </label>
+                <input type="text" name="cargaHoraria" id="cargaHoraria"> <br>
+            </div>
+            <div class="form-endereco">
+
+                <h1>ENDEREÇO</h1>
+
+                <div class="org-est-cid">
+                    <label for="estado"> Estado: </label>
+                    <select name="estado" id="estado">
+                        <option value="Alagoas" selected>Alagoas</option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Sergipe">Sergipe</option>
+                        <option value="Amazônia">Amazônia</option>
+                        <option value="Acre">Acre</option>
+                        <option value="Rio de Janeiro" >Rio de Janeiro</option>
+                        <option value="Sergipe">Sergipe</option>
+
+                    </select>
+
+                    <label for="cidade"> Cidade: </label>
+                    <input type="text" name="cidade" id="cidade"> <br>
+                </div>
+               
+                <label for="rua"> Rua:</label>
+                <input type="text" name="rua" id="rua"> <br>
+
+                <label for="bairro"> Bairro: </label>
+                <input type="text" name="bairro" id="bairro"> <br>
+
+                <div class="org-cep-num">
+                    <label for="cep"> CEP: </label>
+                    <input type="text" name="cep" id="cep"> <br>
+
+                    <label for="numero"> Número: </label>
+                    <input type="number" name="numero" id="numero"> <br>
+                </div>
+
+
+            </div>
+            <div class="org-btn-cad-list">
+                <button type="submit" id="btn-cadastrar"> CADASTRAR </button>
+                <button class="btn-ver-listagem"> <a href="../listagem/listagemProf.html"> VER
+                        LISTA</a></button>
+            </div>
+        </form>
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>CRIA</h3>
+                <p>Secretaria de Estado Extraordinária da Primeira Infância</p>
+                <p> Pariconha, Maceió- AL</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="jvcadastroProf.js"></script>
+</body>
+
+</html>

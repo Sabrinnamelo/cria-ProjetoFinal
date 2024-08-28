@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssListagemCrianca.css">
+    <title>Listagem da criança</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Professores</a></li>
+            <li><a href="#">Responsavéis</a></li>
+            <li><a href="#">Responsavéis de Retirada</a></li>
+            <li><a href="#">Crianças</a></li>
+            <li><a href="#">Turma</a></li>
+            <li><a href="#">Matricula</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Crianças</h1>
+            <a href="../cadastroCrianca/CadastroCrianca.html" class="new-btn " id="openModal">+ Nova criança </a>
+        </div>
+
+        <div class="search-filter">
+            <select name="filtro-turma">
+                <option value="todas">Todas</option>
+            </select>
+            <input type="text" placeholder="Pesquisa rápida">
+        </div>
+
+        <table id="tb-crianca" border="1" class="tb-crianca">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>laudo:</th>
+                    <th>ações</th>
+                    <th>ver responsaveis de retirada</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="jvListagemCria.js"></script>
+</body>
+</html>

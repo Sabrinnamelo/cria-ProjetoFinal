@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criança</title>
+    <link href="fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome/css/brands.css" rel="stylesheet">
+    <link href="fontawesome/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="designerCrianca.css">
+</head>
+
+<body>
+    <div class="todoFormulario">
+        <form class="cadastroCrianca" id="cadastroCrianca" method=put action="http://localhost:8080/crianca">
+
+            <h2>Cadastro da Criança</h2>
+
+            <div class="input-icon">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="nome" name="nome" required placeholder="NOME DA CRIANÇA">
+            </div>
+            <div class="input-icon">
+                <i class="fa-solid fa-venus-mars"></i>
+                <input type="text" id="genero" name="genero" required placeholder="GÊNERO">
+            </div>
+            <div class="input-icon">
+                <i class="fa-solid fa-id-card"></i>
+                <input type="text" id="cpf" name="cpf" required placeholder="CPF">
+            </div>
+            <div class="input-icon">
+                <i class="fa-solid fa-briefcase-medical"></i>
+                <input type="text" id="sus" name="sus" required placeholder="SUS" maxlength="14">
+            </div>
+            <div class="input-icon">
+                <i class="fa-solid fa-file-alt"></i>
+                <input type="text" id="certidaoNascimento" name="certidaoNascimento" required placeholder="CERTIDÃO DE NASCIMENTO">
+            </div>
+            <div class="input-icon">
+                <i class="fa-solid fa-barcode"></i>
+                <input type="text" id="nis" name="nis" required placeholder="NIS">
+            </div>
+            <div class="input-icon">
+                <i class="fa-solid fa-calendar"></i>
+                <input type="text" id="dataNascimento" name="dataNascimento" required placeholder="DATA DE NASCIMENTO">
+            </div>
+            
+             <div class="input-icon">
+                <i class="fa-solid fa-calendar"></i>
+                <input type="text" id="responsavel" name="responsavel"  placeholder="responsavel">
+            </div>
+             <div class="input-icon">
+                <i class="fa-solid fa-calendar"></i>
+                <input type="text" id="responsavelRetirada" name="responsavelRetirada"  placeholder="responsavelRetirada">
+            </div>
+
+
+            <h2>Saúde da Criança</h2>
+
+            <div class="input-icon">
+                <i class="fa-solid fa-exclamation-triangle"></i>
+                <input type="text" id="alergia" name="alergia" required placeholder="ALERGIA">
+            </div>
+            <div class="input-icon">
+                <i class="fa-solid fa-file-medical"></i>
+                <input type="text" id="laudo" name="laudo" required placeholder="LAUDO">
+            </div>
+            <div class="input-icon">
+                <i class="fa-solid fa-sticky-note"></i>
+                <input type="text" id="observacao" name="observacao" required placeholder="OBSERVAÇÕES">
+            </div>
+
+           
+            
+
+                <button type="submit" id="btn-cadastrar"> CADASTRAR </button>
+                <br>
+                <button class="btn-ver-listagem"> <a href="../listagemCrianca/listagemCrianca.html"> VER
+                        LISTA</a></button>
+            
+        </form>
+    </div>
+
+    <script src="jvCadastroCrian.js"></script>
+</body>
+
+</html>
