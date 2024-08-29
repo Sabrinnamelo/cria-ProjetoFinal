@@ -13,7 +13,7 @@
 
 <body>
     <div class="todoFormulario">
-        <form class="cadastroCrianca" id="cadastroCrianca" method=put action="http://localhost:8080/crianca">
+        <form class="cadastroCrianca" id="cadastroCrianca" action="#">
 
             <h2>Cadastro da Criança</h2>
 
@@ -43,17 +43,15 @@
             </div>
             <div class="input-icon">
                 <i class="fa-solid fa-calendar"></i>
-                <input type="text" id="dataNascimento" name="dataNascimento" required placeholder="DATA DE NASCIMENTO">
+                <input type="date" id="dataNascimento" name="dataNascimento" required placeholder="DATA DE NASCIMENTO">
             </div>
             
              <div class="input-icon">
                 <i class="fa-solid fa-calendar"></i>
-                <input type="text" id="responsavel" name="responsavel"  placeholder="responsavel">
+                <input type="text" id="responsavel" name="responsavel" required placeholder="responsavel">
             </div>
-             <div class="input-icon">
-                <i class="fa-solid fa-calendar"></i>
-                <input type="text" id="responsavelRetirada" name="responsavelRetirada"  placeholder="responsavelRetirada">
-            </div>
+            
+           
 
 
             <h2>Saúde da Criança</h2>
