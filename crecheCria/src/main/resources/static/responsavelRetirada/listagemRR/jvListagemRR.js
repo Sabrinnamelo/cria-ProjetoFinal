@@ -43,7 +43,7 @@ function abrirModalEdicao(item) {
     document.getElementById("edit-cpf").value = item.cpf;
     document.getElementById("edit-email").value = item.email;
     document.getElementById("edit-cidade").value = item.endereco.cidade;
-    document.getElementById("edit-endereco").value = item.endereco.logradouro; // Supondo que o endereço tenha esse campo
+    document.getElementById("edit-endereco").value = item.endereco.cep; // Supondo que o endereço tenha esse campo
     document.getElementById("edit-telefone").value = item.telefone; // Supondo que exista o campo telefone
 }
 

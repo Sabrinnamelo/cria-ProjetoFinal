@@ -37,7 +37,8 @@ public class Crianca {
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Saude saudeCrianca;
 
-	@OneToMany
+	@OneToMany(cascade = CascadeType.PERSIST)
+
 	private List<ResponsavelRetirada> responsavelRetirada;
 	
 	public Crianca() {

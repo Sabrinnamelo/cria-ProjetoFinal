@@ -12,7 +12,7 @@
 </head>
 
 <body>
-        <form class="cadastroCrianca" id="cadastroCrianca" method=post action="#">
+        <form class="cadastroCrianca" id="cadastroCrianca" >
 
             <h2>Cdastrando responsaveis de retiradas</h2>
 
@@ -26,10 +26,14 @@
         </form>
 
         
-        <form action="#" id="cadastrar-RR">
+        <form  id="cadastrar-RR">
              
                 <label for="responsavelRetirada">Responsável de retirada:</label>
-                <input type="text" id="responsavelRetirada" name="id"  placeholder="NOME DA CRIANÇA"> <br>
+                <select  id="responsavelRetirada" name="responsavelRetirada">
+                
+                </select>
+                
+               <!--   <input type="text" id="responsavelRetirada" name="responsavelRetirada" > <br>-->
            
            
                 <button type="submit" id="btn-cadastrar"> cadastrar Responsavel de retirada </button>
@@ -38,7 +42,7 @@
     
     
     
-       <table id="tb-crianca" border="1" class="tb-crianca" border="1">
+       <table id="tb-responsavelR" border="1" class="tb-responsavelR" border="1">
             <thead>
                 <tr>
                     <th>Id</th>

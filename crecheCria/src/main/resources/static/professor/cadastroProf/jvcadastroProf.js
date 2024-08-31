@@ -35,6 +35,8 @@ function enviarDados(event) {
     .then(resposta => resposta.json())
     .then(retorno => {
         console.log(retorno);
+        document.location.reload(true);
+
     })
     .catch(erro => console.log(erro));
 }
