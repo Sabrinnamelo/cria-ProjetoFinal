@@ -34,7 +34,7 @@ public class Crianca {
 	@ManyToOne
 	private Responsavel responsavel;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Saude saudeCrianca;
 
 	@OneToMany

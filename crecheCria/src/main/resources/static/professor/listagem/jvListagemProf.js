@@ -2,7 +2,7 @@ function obterDados() {
     fetch("http://localhost:8080/professora")
         .then(resposta => resposta.json())
         .then(retorno => {
-            const corpoTB = document.querySelector("#tb-form tbody");
+            const corpoTB = document.querySelector("#listaProfessores ");
             retorno.forEach(item => {
                 corpoTB.innerHTML +=
                     `<tr>

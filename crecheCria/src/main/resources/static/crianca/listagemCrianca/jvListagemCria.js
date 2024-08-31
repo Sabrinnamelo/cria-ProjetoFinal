@@ -4,9 +4,13 @@ function obterDados(){
     fetch("http://localhost:8080/crianca")
     .then(resposta => resposta.json())
     .then(retorno => {
+		console.log(retorno)
         const corpoTB = document.querySelector("#tb-crianca tbody");
+        			corpoTB.innerHTML ="";
+
         retorno.forEach( item =>{
             corpoTB.innerHTML += 
+            
             `<tr>
             
                 <td>${item.id}</td>

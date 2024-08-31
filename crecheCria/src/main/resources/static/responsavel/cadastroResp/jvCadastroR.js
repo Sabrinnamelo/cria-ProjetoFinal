@@ -1,6 +1,5 @@
 var form = document.querySelector("#form");
 
-form.addEventListener("submit", enviarDados);
 
 function enviarDados(event) {
     event.preventDefault();
@@ -39,3 +38,4 @@ function enviarDados(event) {
     })
     .catch(erro => console.log(erro));
 }
+form.addEventListener("submit", enviarDados);

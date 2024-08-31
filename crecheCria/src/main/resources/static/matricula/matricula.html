@@ -34,7 +34,7 @@
                 <span class="close">&times;</span>
                 <h2>MATRÍCULA</h2>
 
-                <form action="matricula" class="form-sobrep" id="form-sobrep" method="post"> 
+                <form class="form-sobrep" id="form-sobrep" > 
 
                     <label for="anoLetivo">Ano letivo:</label><br>
                     <input type="text" id="anoLetivo" name="anoLetivo">
@@ -42,17 +42,19 @@
                     <label for="status">Status:</label><br>
                     <input type="text" id="status" name="status">
 
-                    <label for="crianca">Criança:</label><br>
-                    <input type="text" id="crianca" name="crianca">
 
+                    <label for="crianca">Criança:</label><br>
+ 					<select id="selectCrianca"></select>
+ 					
                     <label for="professora">Professora:</label><br>
-                    <input type="text" id="professora" name="professora">
+ 					<select id="selectProfessora"></select>
+                    
 
                     <label for="turma">Turma:</label><br>
-                    <input type="text" id="turma" name="turma">
+ 					<select id="selectTurma"></select>
 
                     <label for="creche">Creche:</label><br>
-                    <input type="text" id="creche" name="creche">
+ 					<select id="selectCreche"></select>
 
                     <button type="submit" >Cadastrar matrícula</button>
                 </form>
@@ -78,7 +80,7 @@
                     <th>Ações</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="listarMatricula">
              
             </tbody>
         </table>

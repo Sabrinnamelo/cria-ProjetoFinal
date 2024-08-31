@@ -3,6 +3,7 @@ function obterDados() {
         .then(resposta => resposta.json())
         .then(retorno => {
             const corpoTB = document.querySelector("#tb-form tbody");
+            corpoTB.innerHTML="";
             retorno.forEach(item => {
                 corpoTB.innerHTML +=
                     `<tr>
