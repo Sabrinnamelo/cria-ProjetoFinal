@@ -12,10 +12,22 @@
 </head>
 
 <body>
+
+   
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../../PaginaInicial/home.html">HOME </a></li>
+                <li><a href="../../telaLogin/html.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
     <div class="todoFormulario">
         <form class="cadastroCrianca" id="cadastroCrianca" action="#">
 
-            <h2>Cadastro da Criança</h2>
+            <h2>CRIANÇA</h2>
 
             <div class="input-icon">
                 <i class="fa-solid fa-user"></i>
@@ -47,13 +59,11 @@
             </div>
             
             <div class="input-icon">
+            <label for="selectResponsavel"> Lista dos responsáveis de Retirada</label>
           <select id="selectResponsavel"></select>
         </div>
-            
-           
 
-
-            <h2>Saúde da Criança</h2>
+            <h2>SAÚDE</h2>
 
             <div class="input-icon">
                 <i class="fa-solid fa-exclamation-triangle"></i>
@@ -71,14 +81,24 @@
            
             
 
+            <div class="org-btn-cad-list">
                 <button type="submit" id="btn-cadastrar"> CADASTRAR </button>
-                <br>
-                <button class="btn-ver-listagem"> <a href="../listagemCrianca/listagemCrianca.html"> VER
+                <button class="btn-ver-listagem"> <a href="../listagemCrianca/listagemCrianca.html""> VER
                         LISTA</a></button>
+            </div>
             
         </form>
     </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>CRIA</h3>
+                <p>Secretaria de Estado Extraordinária da Primeira Infância</p>
+                <p> Pariconha, Maceió- AL</p>
+            </div>
 
+        </div>
+    </footer>
     <script src="jvCadastroCrian.js"></script>
 </body>
 

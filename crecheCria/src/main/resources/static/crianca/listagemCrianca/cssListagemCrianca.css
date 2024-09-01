@@ -116,19 +116,19 @@ body{
     cursor: pointer;
 }
 
-.tb-form {
+.tb-crianca {
     width: 100%;
     border-collapse: collapse;
     
 }
 
-.tb-form th, .tb-form td {
+.tb-crianca th, .tb-crianca td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
 }
 
-.tb-form th {
+.tb-crianca th {
     background-color:  #F28E42;
     color: white;
 }
