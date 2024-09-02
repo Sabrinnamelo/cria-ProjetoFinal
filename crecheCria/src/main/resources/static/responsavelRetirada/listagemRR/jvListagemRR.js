@@ -14,7 +14,7 @@ function obterDados() {
                 <td>${item.endereco.cidade}</td>
                     <td>
                     <button class="btn-editar" onclick='abrirModalEdicao(${JSON.stringify(item)})'>Editar</button>
-                    <button class="btn-deletar" onclick='deletarTurma(${item.id})'>Deletar</button>
+                    <button class="btn-deletar" onclick='deletar(${item.id})'>Deletar</button>
                     </td>
             </tr>`;
             });
@@ -23,12 +23,12 @@ function obterDados() {
 }
 
 
-function deletarTurma(id) {
+function deletar(id) {
     fetch(`http://localhost:8080/responsavelRetirada/${id}`, {
         method: 'DELETE'
     })
     .then(() => {
-        document.location.reload(true); // Recarrega a página para atualizar a lista
+        document.location.reload(true); 
     })
     .catch(erro => console.log(erro));
 }
@@ -37,7 +37,6 @@ function abrirModalEdicao(item) {
     const modal = document.getElementById("editModal");
     modal.style.display = "block";
 
-    // Preenche o formulário com os dados do item
     document.getElementById("edit-id").value = item.id;
     document.getElementById("edit-nome").value = item.nome;
     document.getElementById("edit-cpf").value = item.cpf;

@@ -132,3 +132,20 @@ body{
     background-color:  #F28E42;
     color: white;
 }
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: right;
+    }
+
+    input, select {
+        width: 90%;
+        margin-left: 0;
+    }}

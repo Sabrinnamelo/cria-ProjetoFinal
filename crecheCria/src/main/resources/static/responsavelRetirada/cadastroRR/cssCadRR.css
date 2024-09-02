@@ -5,6 +5,8 @@
 }
 
 body {
+	    font-family: Arial, sans-serif;
+	
     background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
@@ -21,11 +23,10 @@ header {
     list-style: none;
     display: flex;
     justify-content: end;
- 
 }
 
 .navbar ul li {
-    margin: 0 20px;    
+    margin: 0 20px;
     border: solid 1px #e07a30;
     background-color: #e07a30;
     padding: 10px;
@@ -69,7 +70,7 @@ label {
 }
 
 input {
-    width:60%;
+    width: 60%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
@@ -79,36 +80,27 @@ input {
     margin-left: 10px;
 }
 
-input:focus
- {
+input:focus {
     border-color: #F28E42;
     outline: none;
 }
-.org-cpf-rg{
+
+.org-cpf-rg,
+.org-cep-num,
+.org-est-cid {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-.org-cep-num{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
+
 .org-btn-cad-list {
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
     text-decoration: none;
-    
 }
-.org-est-cid{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
+
 #btn-cadastrar {
     background-color: #F28E42;
     color: white;
@@ -121,6 +113,7 @@ input:focus
 #btn-cadastrar:hover {
     background-color: #e07a30;
 }
+
 .btn-ver-listagem {
     background-color: #F28E42;
     border: none;
@@ -137,7 +130,8 @@ input:focus
 .btn-ver-listagem:hover {
     background-color: #e07a30;
 }
-select{
+
+select {
     width: 35%;
     height: 40px;
     color: #333;
@@ -162,4 +156,41 @@ footer {
 
 .footer-left p {
     margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: right;
+    }
+
+    input, select {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .org-cpf-rg,
+    .org-cep-num,
+    .org-est-cid,
+    .org-btn-cad-list {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-ver-listagem,
+    #btn-cadastrar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    form {
+        padding: 20px;
+        max-width: 100%;
+    }
 }

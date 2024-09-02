@@ -149,3 +149,16 @@ footer {
 label{
     color: gray;
 }
+
+
+@media (max-width: 768px) {
+	
+	.navbar ul{
+	flex-direction: column;
+	}
+	.todoFormulario{
+	width: 100%}
+	.org-btn-cad-list{
+	flex-direction: column;;
+	}
+}

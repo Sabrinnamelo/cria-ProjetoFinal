@@ -47,6 +47,8 @@ function obterDados(){
                 <td>${dadosResponsavelRetirada.id}</td>
                 <td>${dadosResponsavelRetirada.nome}</td> 
                 <td>${dadosResponsavelRetirada.cpf}</td>
+                <td>${dadosResponsavelRetirada.endereco.cidade}</td>
+
             </tr>`;
         });
     })

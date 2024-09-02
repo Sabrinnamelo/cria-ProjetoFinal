@@ -23,15 +23,12 @@ body {
     margin-left: 25px;
 }
 
+
 .navbar ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-.navbar ul li a:hover {
-    text-decoration: underline;
-}
 
 .container {
     max-width: 1200px;
@@ -89,30 +86,21 @@ body {
 }
 
 .matricula-table {
-    width: 100%;
+     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
 }
 
 .matricula-table th, .matricula-table td {
     border: 1px solid #ddd;
-    padding: 12px;
+    padding: 10px;
     text-align: center;
 }
 
 .matricula-table th {
-    background-color: #F28E42;
+     background-color: #F28E42;
     color: white;
-    font-weight: bold;
 }
 
-.matricula-table td {
-    background-color: #f9f9f9;
-}
-
-.matricula-table tr:nth-child(even) td {
-    background-color: #f2f2f2;
-}
 
 .btn-editar, .btn-deletar {
     border: none;
@@ -212,13 +200,8 @@ body {
     border-radius: 10px;
     max-width: 500px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.3s ease-in-out;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
 .close {
     color: #aaa;
@@ -233,3 +216,34 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+@media (max-width: 750px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .form-sobrep {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-sobrep > input, .form-sobrep > select, .form-sobrep > button {
+        width: 100%;
+    }
+
+    .matricula-table th, .matricula-table td {
+        padding: 8px;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+        padding: 15px;
+    }
+}
+

@@ -16,13 +16,12 @@ function obterDados(){
                 <td>${item.id}</td>
                 <td>${item.nome}</td>
                 <td>${item.saudeCrianca.laudo}</td>
-
-                   <td>
+                <td><a href ="inserirResRet.html?id=${item.id}" > Ver Lista </td>
+                 <td>
                         <button class="btn-editar">Editar</button>
-                        <button class="btn-deletar">Deletar</button>
+                    <button class="btn-deletar" onclick='deletar(${item.id})'>Deletar</button>
 
                     </td>
-                <td><a href ="inserirResRet.html?id=${item.id}" > responsaveis de retirada </td>
 
             </tr>`
         })
@@ -33,5 +32,14 @@ function obterDados(){
 obterDados();
 
 
+function deletar(id) {
+  fetch(`http://localhost:8080/crianca/${id}`, {
+    method: 'DELETE',
+  })
+  .then(() => {
+    document.location.reload(true);
+  })
+  .catch(erro => console.log(erro));
+}
 
 

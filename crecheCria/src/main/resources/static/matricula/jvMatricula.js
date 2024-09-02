@@ -1,13 +1,10 @@
-// Seleciona o formulário de matrícula
 var formMatricula = document.querySelector("#form-sobrep");
 
-// Inicializa as entidades relacionadas
 let crianca = {};
 let professora = {};
 let turma = {};
 let creche = {};
 
-// Função para enviar os dados do formulário
 function enviarDados(event) {
   event.preventDefault();
 
@@ -40,7 +37,6 @@ function enviarDados(event) {
     });
 }
 
-// Função para obter e listar as matrículas
 function obterDados() {
   fetch("http://localhost:8080/matricula")
     .then(resposta => resposta.json())
@@ -57,7 +53,7 @@ function obterDados() {
             <td>${item.turma.sala}</td>
             <td>
               <button class="btn-editar">Editar</button>
-              <button class="btn-deletar">Deletar</button>
+              <button class="btn-deletar" onclick='deletar(${item.id})'>Deletar</button>
             </td>
           </tr>`;
       });
@@ -65,6 +61,15 @@ function obterDados() {
     .catch(erro => console.error("Erro ao obter dados:", erro));
 }
 
+function deletar(id) {
+    fetch(`http://localhost:8080/matricula/${id}`, {
+        method: 'DELETE'
+    })
+    .then(() => {
+        document.location.reload(true); 
+    })
+    .catch(erro => console.log(erro));
+}
 // Função para abrir o modal
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("openModal");

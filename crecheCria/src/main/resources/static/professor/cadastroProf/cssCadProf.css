@@ -5,6 +5,8 @@
 }
 
 body {
+	 font-family: Arial, sans-serif;
+	
     background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
@@ -162,4 +164,41 @@ footer {
 
 .footer-left p {
     margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: right;
+    }
+
+    input, select {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .org-cpf-rg,
+    .org-cep-num,
+    .org-est-cid,
+    .org-btn-cad-list {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-ver-listagem,
+    #btn-cadastrar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    form {
+        padding: 20px;
+        max-width: 100%;
+    }
 }

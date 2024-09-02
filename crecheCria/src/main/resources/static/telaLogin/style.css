@@ -6,7 +6,8 @@
 }
 
 body {
-
+    font-family: Arial, sans-serif;
+	
     background-image: url("../arquivos/background.png");
     background-attachment: fixed;
     background-position: center;
@@ -197,10 +198,14 @@ body {
 
 @keyframes changeBackground {
    0%{
-    background-image: url(/arquivos/background.png);
+    background-image: url(../arquivos/background.png);
+
+   }
+   50%{
+    background-image: url(../arquivos/background.png);
 
    }
     100% {
-        background-image: url(/arquivos/logoAlagoas.png);
+        background-image: url(../arquivos/logoAlagoas.png);
     }
 }
