@@ -19,14 +19,7 @@ import ifba.service.CrecheService;
 @RestController
 @RequestMapping("creche")
 public class CrecheController {
-	/*
-	 *POST 		 save(Creche):creche 
-	 *GET  		 listarAll (List<Creche>)
-	 *GET  		 LocalizarPorId(id):Creche
-	 *PUT 	     atualizar(creche):Creche
-	 *DELETE 	 delete(int):void
-	 */
-
+	
 	@Autowired
 	private CrecheService serviceCreche;
 	

@@ -8,7 +8,6 @@ public class CrecheCriaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CrecheCriaApplication.class, args);
-		System.out.println("Criado ");
 	}
 
 }
